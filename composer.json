@@ -1,7 +1,7 @@
 {
-    "name": "serverfireteam/rapyd-laravel",
+    "name": "greenelf/rapyd-laravel",
     "description": "crud widgets for laravel 5.1, to make an admin in few lines of code",
-    "homepage": "https://github.com/serverfireteam/rapyd-laravel",
+    "homepage": "https://github.com/Greenelf/rapyd-laravel",
     "keywords": ["laravel", "crud", "rapyd", "administrator", "admin", "backend", "datatable", "form"],
     "authors": [
         {
