@@ -122,7 +122,7 @@ class DataSet extends Widget
         return $this;
     }
 
-    public function build()
+    public function build($options = [])
     {
         if (is_string($this->source) && strpos(" ", $this->source) === false) {
             //tablename
@@ -205,7 +205,13 @@ class DataSet extends Widget
 
             case "query":
             case "model":
-                $this->total_rows = $this->query->count();
+
+                if (key_exists('count_column', $options)){
+                    $this->total_rows = $this->query->count($options['count_column']);
+                }else{
+                    $this->total_rows = $this->query->count();
+                }
+
                 //orderby
                 if (isset($this->orderby)) {
                     $this->query = $this->query->orderBy($this->orderby[0], $this->orderby[1]);
